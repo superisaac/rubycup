@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="mas:container:config" name="Moderate Match" port="9001">
+   <agents>
+   <!-- Match agent-->
+      <agent name="Match" file="match.rb" class="MatchAgent">
+         <arguments></arguments>
+      </agent>
+   <!-- Observer Agent through DRb-->
+      <agent name="Observer.DRb" file="observer_drb.rb" class="ObserverDRbAgent">
+         <arguments></arguments>
+      </agent>
+
+   <!-- Team A players-->
+      <agent name="A1" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+
+      <agent name="A2" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+      <agent name="A3" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+  
+   <!-- Team B players-->
+      <agent name="B1" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+      <agent name="B2" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+      <agent name="B3" file="player.rb" class="PlayerAgent">
+         <arguments>moderate</arguments>
+      </agent>
+   </agents>    
+</container>

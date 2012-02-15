@@ -1,0 +1,52 @@
+
+=== Prereqirements
+P1. Install the ruby language (version >= 1.8.3) from source or any of the binary forms
+P2. Install the SDL(Simple DirectMedia Layer) ruby binding according to instructions on the web site of Ruby/SDL
+
+
+
+=== Run match
+There are two methods to start a match
+
+==== Method 1: run  the match through ruby script
+change directory to the ruby cup folder
+then type
+>> ruby run_match.rb 
+
+If you want to load different wisdoms, for example moderate wisdom,  you may fill the option of run_match.rb like
+
+>> ruby run_match.rb --teama=stupid --teamb=moderate
+
+which means team A has stupid wisdom and team B has moderate wisdom
+
+type 
+>> ruby run_match.rb -h 
+or 
+
+>> ruby run_match.rb --help 
+for help information
+
+==== Method 2: run the match through XML config files
+This method depends on a script mas/run_container.rb which takes a XML file as an  arguments to lauch start up agents
+If no XML config file is specified then the container.XML at current directory is the default one
+there are two XML config files at the ruby cup's install directory, container.xml and container-moderate.xml, you can choose 
+on to launch or write your own XML configure files.
+
+example
+>> ruby mas/run_container.rb container-moderate.xml
+
+=== Run monitors
+And start sdl monitor by typing
+>> ruby sdlmonitor.rb at another console
+If everything is OK, there will be a window showing the match.
+You can start multiple monitors at the same time
+
+
+=== Deploy your own wisdom
+If you developed your own wisdom you can deply it  on the RubyCUP platform
+Assumes that your wisdom's name is $MYWISDOM, the lauching file of your wisdom is $MYWISDOM.rb
+S1: you should put every needed scripts including the $MYWISDOM.rb under the folder $RUBYCUP/wisdoms/$WISDOM.
+S2: Modify the argument of run_match.rb or container.xml
+S3: restart the  match
+
+For details on how to development your own wisdom see the Developer's Guide (Yet to be written) please.

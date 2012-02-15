@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<container name="abc" platform="" port="9001">
+   <agents>
+      <agent name="Match" file="match.rb" class="MatchAgent">
+         <arguments></arguments>
+      </agent>
+      <agent name="Observer.DRb" file="observer_drb.rb" class="ObserverDRbAgent">
+         <arguments></arguments>
+      </agent>
+
+   <!-- Team A players-->
+      <agent name="A1" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+
+      <agent name="A2" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+      <agent name="A3" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+  
+   <!-- Team B players-->
+      <agent name="B1" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+      <agent name="B2" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+      <agent name="B3" file="player.rb" class="PlayerAgent">
+         <arguments>stupid</arguments>
+      </agent>
+   </agents>    
+</container>
